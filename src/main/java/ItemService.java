@@ -1,19 +1,23 @@
+
+import java.io.IOException;
+
 public class ItemService {
 
-    private static final ItemDAO itemDAO = new ItemDAO();
+      final static ItemDAO itemDAO = new ItemDAO();
 
-    public  Item doGet() throws Exception{
+    public Item doGet() throws Exception {
         return itemDAO.doGet();//
     }
-    public  Item doPost() throws Exception{
-        return itemDAO.doPost();//
+
+    public void doPostService(Item item) throws IOException {
+        itemDAO.save(item);//
     }
 
-    public  Item doPut() throws Exception{
+    public Item doPut() throws Exception {
         return itemDAO.doPut();//
     }
 
-    public  Item doDelete() throws Exception{
+    public Item doDelete() throws Exception {
         return itemDAO.doDelete();//
     }
 
