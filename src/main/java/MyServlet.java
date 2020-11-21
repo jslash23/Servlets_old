@@ -26,15 +26,14 @@ public class MyServlet extends HttpServlet {
         //добавляем ай ди и даты
         //сохраняем в БД
 
-        try {
+
             item.setName(req.getParameter("name"));
             item.setDescription(req.getParameter("description"));
-            itemService.doPostService(item);
-            throw new IOException();
-        } catch (IOException e) {
-            System.out.println("Something wrong!!!");
-            e.printStackTrace();
-        }
+            itemService.servSave(item);
+
+            resp.getWriter().println("Post success");
+
+
     }
 
     @Override

@@ -3,22 +3,22 @@ import java.io.IOException;
 
 public class ItemService {
 
-      final static ItemDAO itemDAO = new ItemDAO();
+      ItemDAO itemDAO = new ItemDAO();
 
-    public Item doGet() throws Exception {
-        return itemDAO.doGet();//
+    public Item servRead() throws Exception {
+        return itemDAO.daoRead();//
     }
 
-    public void doPostService(Item item) throws IOException {
-        itemDAO.save(item);//
+    public void servSave(Item item) throws IOException {
+        itemDAO.daoSave(item);//
     }
 
-    public Item doPut() throws Exception {
-        return itemDAO.doPut();//
+    public Item servUpdate() throws Exception {
+        return itemDAO.daoUpdate();//
     }
 
-    public Item doDelete() throws Exception {
-        return itemDAO.doDelete();//
+    public Item servDelete() throws Exception {
+        return itemDAO.daoDelete();//
     }
 
 }

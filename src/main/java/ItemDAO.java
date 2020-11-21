@@ -10,11 +10,11 @@ import java.io.IOException;
 public class ItemDAO {
     MyServlet myServlet = new MyServlet();
 
-    public Item doGet() {
+    public Item daoRead() {
         return null;
     }
 
-    public void save(Item item) throws IOException {
+    public void daoSave(Item item) throws IOException {
 
         try (Session session = createSessionFactory().openSession()) {
 
@@ -38,11 +38,11 @@ public class ItemDAO {
 
 
 
-    public Item doPut() {
+    public Item daoUpdate() {
         return null;
     }
 
-    public Item doDelete() {
+    public Item daoDelete() {
         return null;
     }
 
